@@ -1,7 +1,7 @@
 module.exports = {
     parser: 'babel-eslint',
     extends: ['airbnb', 'plugin:flowtype/recommended'],
-    plugins: ['flowtype', 'fp'],
+    plugins: ['flowtype', 'fp', 'react'],
     env: {
         browser: true
     },
@@ -34,6 +34,7 @@ module.exports = {
         'no-unused-vars': 0,
         'no-use-before-define': ['error', { functions: false }],
         'padded-blocks': 0,
+        "react/prefer-stateless-function": 0,
         'react/forbid-prop-types': 0, // Este is going to use Flow types.
         'react/jsx-filename-extension': 0, // No, JSX belongs to .js files
         'react/jsx-indent': 0, // Damn. We need Yarn asap.

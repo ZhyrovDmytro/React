@@ -7,10 +7,10 @@ import 'svgxuse';
 import init from './init';
 import factory from './factory';
 import { render, renderFactory } from './render';
-import Layout from './components/Layout';
+import App from './components/App';
 
 const app = (config) => {
-    render(Layout, document.querySelector('.section'));
+    render(App, document.querySelector('.section'));
 };
 
 app(window.config);

@@ -10,7 +10,7 @@ import { render, renderFactory } from './render';
 import App from './components/App';
 
 const app = (config) => {
-    render(App, document.querySelector('.section'));
+    render(App, document.querySelector('.todos'));
 };
 
 app(window.config);

@@ -11,7 +11,6 @@ export default class TodosListItem extends Component {
         this.state = {
             isEditing: false
         };
-
     }
 
     onCancelClick() {
@@ -25,16 +24,16 @@ export default class TodosListItem extends Component {
     renderAction() {
         if (this.state.isEditing) {
             return (
-                <td key='td'>
-                    <button>Save</button>
-                    <button onClick={this.onCancelClick}>Cancel</button>
+                <td key="td">
+                    <button className="btn">Save</button>
+                    <button className="btn" onClick={this.onCancelClick}>Cancel</button>
                 </td>
             );
         }
         return (
-            <td key='td'>
-                <button onClick={this.inEditClick}>Edit</button>
-                <button>Delete</button>
+            <td key="td">
+                <button className="btn" onClick={this.inEditClick}>Edit</button>
+                <button className="btn">Delete</button>
             </td>
         );
     }
@@ -42,8 +41,8 @@ export default class TodosListItem extends Component {
 
     render() {
         return (
-            <tr key='tr'>
-                <td>{this.props.task}</td>
+            <tr key="tr">
+                <td className="todos__task">{this.props.task}</td>
                 {this.renderAction()}
             </tr>
         );

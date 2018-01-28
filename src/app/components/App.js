@@ -34,8 +34,8 @@ export default class App extends Component {
 
     render() {
         return (
-            <div>
-                <h1>ToDo App</h1>
+            <div className="w-100">
+                <h1 className="todos__title text-center">ToDo App</h1>
                 <CreateTodos createTask={this.createTask} />
                 <TodosList
                     todos={this.state.todos}

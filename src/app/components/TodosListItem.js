@@ -25,15 +25,15 @@ export default class TodosListItem extends Component {
         if (this.state.isEditing) {
             return (
                 <td key="td">
-                    <button className="btn">Save</button>
-                    <button className="btn" onClick={this.onCancelClick}>Cancel</button>
+                    <button className="btn btn--ctrl btn--save" />
+                    <button className="btn btn--ctrl btn--cancel" onClick={this.onCancelClick} />
                 </td>
             );
         }
         return (
             <td key="td">
-                <button className="btn" onClick={this.inEditClick}>Edit</button>
-                <button className="btn">Delete</button>
+                <button className="btn btn--ctrl btn--edit" onClick={this.inEditClick} />
+                <button className="btn btn--ctrl btn--delete" />
             </td>
         );
     }

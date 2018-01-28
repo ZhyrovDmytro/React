@@ -13,14 +13,14 @@ export default class TodosList extends Component {
 
     handleCreate(event) {
         event.preventDefault();
-        this.props.createTask('asdads');
+        this.props.createTask(this.refs.createInput.value);
     }
 
     render() {
         return (
-            <form onSubmit={this.handleCreate}>
-                <input type="text" placeholder="What I need to do?" />
-                <button>Create</button>
+            <form className="form" onSubmit={this.handleCreate}>
+                <input className="input" type="text" placeholder="What I need to do?" />
+                <button className="btn btn--green">+</button>
             </form>
         );
     }

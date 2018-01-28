@@ -15,7 +15,7 @@ export default class TodosList extends Component {
 
     render() {
         return (
-            <table>
+            <table className="w-100">
                 <TodosListHeader />
                 <tbody>
                     {this.renderItems()}

@@ -1,5 +1,6 @@
 .btn {
     position: relative;
+    display: inline-block;
     padding: 20px;
     background: #eee;
     border-style: none;
@@ -10,15 +11,44 @@
         cursor: pointer;
         outline: none;
         box-shadow: 0 0 10px 0 rgba(255, 255, 255, .6);
-
     }
 
     &--green {
         @include size(70px);
         position: absolute;
-        right: -20px;
         top: -1px;
+        right: 0;
         color: #fff;
         background-color: #02c897;
+    }
+
+    &--ctrl {
+        @include size(50px);
+        padding: 16px;
+        margin: 3px;
+    }
+
+    &--edit {
+        &::after {
+            content: svg-load('pencil.svg', width='20px', height='20px');
+        }
+    }
+
+    &--delete {
+        &::after {
+            content: svg-load('trash.svg', width='20px', height='20px');
+        }
+    }
+
+    &--save {
+        &::after {
+            content: svg-load('checked.svg', width='20px', height='20px');
+        }
+    }
+
+    &--cancel {
+        &::after {
+            content: svg-load('cancel.svg', width='20px', height='20px');
+        }
     }
 }

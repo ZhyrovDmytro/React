@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import TodosListHeader from './TodosListHeader';
 import TodosListItem from './TodosListItem';
 
 export default class TodosList extends Component {
 
     renderItems() {
-        return this.props.todos.map((todo) =>
+        let i = 0;
+        return this.props.todos.map(todo =>
             (<TodosListItem
-                key={todo.index}
+                key={(i += 1) - 1}
                 {...todo}
             />)
         );
@@ -15,7 +17,7 @@ export default class TodosList extends Component {
 
     render() {
         return (
-            <table className="w-100">
+            <table className="w-100 mb-4">
                 <TodosListHeader />
                 <tbody>
                     {this.renderItems()}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import App from './App';
+import Practice from './Practice';
 import TodosList from './TodosList';
 
 export default class Layout extends Component {
@@ -10,7 +11,9 @@ export default class Layout extends Component {
             <div>
                 <TodosList />
                 <App />
+                <Practice />
             </div>
         );
     }
 }
+

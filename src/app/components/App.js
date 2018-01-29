@@ -25,11 +25,17 @@ export default class App extends Component {
     }
 
     createTask(task) {
-        this.state.todos.push({
+        const newTodo = {
             task,
             isCompleted: false
+        };
+
+        this.setState({
+            todos: [
+                ...this.state.todos,
+                newTodo
+            ]
         });
-        this.setState({ todos: this.state.todos });
     }
 
     render() {

@@ -4,9 +4,9 @@ export default class TodosListItem extends Component {
     constructor(props) {
         super(props);
 
+        this.onCancelClick = this.onCancelClick.bind(this);
         this.inEditClick = this.inEditClick.bind(this);
         this.renderAction = this.renderAction.bind(this);
-        this.onCancelClick = this.onCancelClick.bind(this);
 
         this.state = {
             isEditing: false
@@ -24,14 +24,14 @@ export default class TodosListItem extends Component {
     renderAction() {
         if (this.state.isEditing) {
             return (
-                <td key="td">
+                <td>
                     <button className="btn btn--ctrl btn--save" />
                     <button className="btn btn--ctrl btn--cancel" onClick={this.onCancelClick} />
                 </td>
             );
         }
         return (
-            <td key="td">
+            <td>
                 <button className="btn btn--ctrl btn--edit" onClick={this.inEditClick} />
                 <button className="btn btn--ctrl btn--delete" />
             </td>
@@ -41,7 +41,7 @@ export default class TodosListItem extends Component {
 
     render() {
         return (
-            <tr key="tr">
+            <tr>
                 <td className="todos__task">{this.props.task}</td>
                 {this.renderAction()}
             </tr>

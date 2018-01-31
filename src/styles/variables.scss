@@ -19,6 +19,9 @@ $theme-colors: (
     danger: $red
 );
 
+$btn-controls-size: 50px;
+$btn-controls-margin: 5px;
+
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
 @import '../../node_modules/bootstrap/scss/mixins';

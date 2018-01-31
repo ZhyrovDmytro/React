@@ -1,7 +1,7 @@
 module.exports = {
     parser: 'babel-eslint',
     extends: ['airbnb', 'plugin:flowtype/recommended'],
-    plugins: ['flowtype', 'fp', 'react'],
+    plugins: ['flowtype', 'fp'],
     env: {
         browser: true
     },
@@ -21,7 +21,7 @@ module.exports = {
         indent: [1, 4, { SwitchCase: 1 }],
         'jsx-a11y/html-has-lang': 0, // Can't recognize the Helmet.
         'max-len': 0,
-        'no-alert': 2,
+        'no-alert': 0,
         'no-class-assign': 0, // Class assign is used for higher order components.
         'no-confusing-arrow': 0, // This rule is super confusing.
         'no-console': 1,
@@ -30,6 +30,7 @@ module.exports = {
         'no-param-reassign': 0, // We love param reassignment. Naming is hard.
         'no-return-assign': 0,
         'no-shadow': 0, // Shadowing is a nice language feature. Naming is hard.
+        'no-unknown': 0,
         'no-unused-expressions': 0,
         'no-unused-vars': 0,
         'no-use-before-define': ['error', { functions: false }],
@@ -37,7 +38,7 @@ module.exports = {
         "react/prefer-stateless-function": 0,
         'react/forbid-prop-types': 0, // Este is going to use Flow types.
         'react/jsx-filename-extension': 0, // No, JSX belongs to .js files
-        'react/jsx-indent': 0, // Damn. We need Yarn asap.
+        'react/jsx-indent': 0, // Damn. We need Yarn asap.y
         'react/jsx-indent-props': [1, 4],
         'react/no-unused-prop-types': 0, // Este is going to use Flow types.
         'react/prop-types': 0, // Can't detect flowtype correctly.

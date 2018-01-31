@@ -6,11 +6,13 @@ import TodosListItem from './TodosListItem';
 export default class TodosList extends Component {
 
     renderItems() {
+        const props = this.props.todos.splice(this.props, 'todos');
         let i = 0;
         return this.props.todos.map(todo =>
             (<TodosListItem
                 key={(i += 1) - 1}
                 {...todo}
+                {...props}
             />)
         );
     }

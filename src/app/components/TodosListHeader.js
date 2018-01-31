@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
+import TodosList from './CreateTodos';
 
-export default class TodosListHeader extends Component {
-    render() {
-        return (
-            <thead>
-                <tr>
-                    <th>Task</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-        );
-    }
+
+function TodosListHeader() {
+    return (
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+    );
 }
+
+export default TodosListHeader;

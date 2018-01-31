@@ -16,16 +16,17 @@
     &--green {
         @include size(70px);
         position: absolute;
-        top: -1px;
+        top: -10px;
         right: 0;
         color: #fff;
         background-color: #02c897;
     }
 
     &--ctrl {
-        @include size(50px);
+        @include size($btn-controls-size);
         padding: 16px;
-        margin: 3px;
+        top: 8px;
+        margin-left: $btn-controls-margin;
     }
 
     &--edit {
@@ -41,14 +42,18 @@
     }
 
     &--save {
+        background-color: #02c897;
+
         &::after {
-            content: svg-load('checked.svg', width='20px', height='20px');
+            content: svg-load('checked.svg', width='20px', height='20px', fill="#fff");
         }
     }
 
     &--cancel {
+        background-color: #e05450;
+
         &::after {
-            content: svg-load('cancel.svg', width='20px', height='20px');
+            content: svg-load('cancel.svg', width='20px', height='20px', fill="#fff");
         }
     }
 }

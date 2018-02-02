@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import App from './App';
-import Practice from './Practice';
-import TodosList from './TodosList';
+import Clock from './Clock';
 
 function Layout() {
     return (
-        <div>
-            <TodosList />
-            <App />
-            <Practice />
+        <div className="layout">
+            <Clock />
         </div>
     );
+}
+
+function Call() {
+    setInterval(Layout(), 1000);
 }
 
 export default Layout;

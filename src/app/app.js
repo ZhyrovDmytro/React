@@ -8,11 +8,11 @@ import init from './init';
 import factory from './factory';
 import { render, renderFactory } from './render';
 import App from './components/App';
-import Practice from './components/Practice';
+import Layout from './components/Layout';
 
 const app = (config) => {
     render(App, document.querySelector('.todos'));
-    render(Practice, document.querySelector('.root'));
+    render(Layout, document.querySelector('.root'));
 };
 
 app(window.config);

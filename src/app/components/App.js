@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import TodosList from './TodosList';
+import Stopwatch from './Stopwatch';
 import CreateTodos from './CreateTodos';
 import TodosListHeader from './TodosListHeader';
+import Layout from './Layout';
 
 const todos = [
     {
@@ -39,6 +41,7 @@ export default class App extends Component {
     }
 
     render() {
+
         return (
             <div className="w-100">
                 <h1 className="todos__title text-center">ToDo App</h1>
@@ -46,6 +49,9 @@ export default class App extends Component {
                 <TodosList
                     todos={this.state.todos}
                 />
+                <Stopwatch />
+                <Layout date={new Date()} />
+
             </div>
         );
     }
